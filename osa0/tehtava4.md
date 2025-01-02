@@ -25,7 +25,7 @@ sequenceDiagram
     server->>browser: Javascript file
     deactivate server
 
-    Not right of browser: the browser executes the Javascript file it received from the server.
+    Note right of browser: the browser executes the Javascript file it received from the server.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server

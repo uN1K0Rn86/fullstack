@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -32,3 +33,4 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The Javascript file retrieves the data contained in the JSON file. The browser renders the notes with the callback funtion.
+```

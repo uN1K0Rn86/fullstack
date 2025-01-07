@@ -5,7 +5,7 @@ const Persons = (props) => {
     <div>
       {props.personsToShow.map(person => (
         <Person
-          key={person.name}
+          key={person.id}
           person={person}
           remove={() => props.remove(person.id)}
         />

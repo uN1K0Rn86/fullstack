@@ -1,7 +1,17 @@
 import Languages from "./Languages"
+import Weather from "./Weather"
 
 const Country = ({ country }) => {
     const languages = Object.values(country.languages)
+
+    let lat, lon
+    if (country.capitalInfo.latlng) {
+        lat = country.capitalInfo.latlng[0]
+        lon = country.capitalInfo.latlng[1]
+    } else {
+        lat = country.latlng[0]
+        lon = country.latlng[1]
+    }
 
     return (
         <div>
@@ -15,7 +25,12 @@ const Country = ({ country }) => {
             <p><img
                     src={country.flags.png}
                     style={{ border: '5px solid black' }}
-                /></p>
+                />
+            </p>
+            <Weather
+                lat={lat}
+                lon={lon}
+            />
         </div>
     )
 }

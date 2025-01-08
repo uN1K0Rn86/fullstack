@@ -1,5 +1,4 @@
 const Languages = ({ languages }) => {
-    console.log(languages)
     return (
         <div>
             <h3>Languages:</h3>

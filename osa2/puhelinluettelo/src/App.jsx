@@ -77,6 +77,12 @@ const App = () => {
             setNotificationMessage(null)
           }, 5000)
         })
+        .catch(error => {
+          setNotificationMessage(error.response.data.error)
+          setTimeout(() => {
+            setNotificationMessage(null)
+          }, 5000)
+        })
   }
 
   const handleNameChange = (event) => {
